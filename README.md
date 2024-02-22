@@ -1,1 +1,1 @@
-View branches for mor information about each program.
+View branches for more information about each program.
