@@ -42,9 +42,9 @@ class list{
 			cout <<"CodeNo \t Item Name \t Quantity \t Price Per Unit \t Total Price \t Status" << endl;
 			for (int i=0;i<count;i++)
 			{
-				cout << codeno[i] <<"\t" << name[i] << "\t" << quantity[i] << "\t" << price[i] <<  "\t" << "\t" << price[i]*quantity[i] << status[i] << endl;
+				if (status[i]!=0)
+					cout << codeno[i] <<"\t" << name[i] << "\t" << quantity[i] << "\t" << price[i] <<  "\t" << "\t" << price[i]*quantity[i] << status[i] << endl;
 			}
-			cout << "Status = 1 --> Active, Status = 0 --> Inactive" << endl;
 			cout <<"Total items =" << count << endl;
 			displaytotal();
 		}
