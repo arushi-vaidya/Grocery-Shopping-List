@@ -22,7 +22,7 @@ class list{
 			cin >> quantity[count];
 			status[count] = 1;
 			count ++;
-			cout <<"\n \n \n" << endl;
+			cout <<"\n" << endl;
 		}
 		void displaytotal()
 		{
@@ -35,7 +35,7 @@ class list{
 				}
 			}
 			cout << "Total amount = Rs." << amount << endl;
-			cout <<"\n \n \n" << endl;
+			cout <<"\n";
 		}
 		void display()
 		{
@@ -43,7 +43,7 @@ class list{
 			for (int i=0;i<count;i++)
 			{
 				if (status[i]!=0)
-					cout << codeno[i] <<"\t" << name[i] << "\t" << quantity[i] << "\t" << price[i] <<  "\t" << "\t" << price[i]*quantity[i] << status[i] << endl;
+					cout << codeno[i] <<"\t\t\t" << name[i] << "\t" << quantity[i] << "\t" << price[i] <<  "\t" << "\t" << price[i]*quantity[i] << status[i] << endl;
 			}
 			cout <<"Total items =" << count << endl;
 			displaytotal();
@@ -51,6 +51,7 @@ class list{
 		void remove()
 		{
 			int x,i;
+			int z=0;
 			cout << "Enter code no to delete item " << endl;
 			cin >> x;
 			for (int i=0;i<count;i++)
@@ -58,10 +59,11 @@ class list{
 				if (codeno[i] == x)
 				{
 					status[i] = 0;
+					z=1;
 				}
-				else cout <<"Item does not exist" << endl;
 			}
-			cout <<"\n \n \n" << endl;
+			if (z=0) cout <<"Item not found" << endl;
+			cout <<"\n " ;
 		}
 		
 };
